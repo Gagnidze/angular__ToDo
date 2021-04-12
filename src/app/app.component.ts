@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'to-do-list';
+
+  navigator: string = 'new';
+
+  assign(address) {
+    // assigns the selected address to navigate 
+    this.navigator = address;
+  }
+
+
+
 }

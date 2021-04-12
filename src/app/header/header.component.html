@@ -1,0 +1,8 @@
+<div class="header-container">
+    <div class="navigation-container">
+        <button class="big-button new-task" (click)="navigationChange('new', $event)" #new>Add Task</button>
+        <button (click)="navigationChange('to do', $event)" class="big-button" #todo>To Do</button>
+        <button (click)="navigationChange('in progress', $event)" class="big-button" #inProgress>In Progress</button>
+        <button (click)="navigationChange('done', $event)" class="big-button" #done>Done</button>
+    </div>
+</div>

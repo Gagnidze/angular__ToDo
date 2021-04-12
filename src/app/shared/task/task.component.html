@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="single-task" *ngFor="let item of todoTasks; index as i" id="{{todoTasks[i].id}}">
+        <button class="delete" (click)="deleteTask($event)">Delete Task</button>
+        <span class="title">{{ todoTasks[i].name }}</span>
+        <span class="description">{{todoTasks[i].description}}</span>
+        <span class="priority">Priority: {{todoTasks[i].priority}}</span>
+        <span class="status">Status: {{todoTasks[i].status}}</span>
+        <select id="status" name="status" #status>
+            <option value="todo">To Do</option>
+            <option value="inProgress">In Progress</option>
+            <option value="done">Done</option>
+        </select>
+        <button (click)="changeStatus(status.value, $event)">Save Changes</button>
+    </div>
+</div>

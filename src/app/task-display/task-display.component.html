@@ -1,0 +1,10 @@
+<div class="task-display">
+    <app-task-creator class="component-width" *ngIf="navigation === 'new'"></app-task-creator>
+
+    <app-todo *ngIf="navigation === 'to do'">
+    </app-todo>
+
+    <app-in-progress *ngIf="navigation === 'in progress'"></app-in-progress>
+
+    <app-done *ngIf="navigation === 'done'"></app-done>
+</div>
